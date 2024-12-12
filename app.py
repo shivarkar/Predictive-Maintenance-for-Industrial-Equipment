@@ -8,16 +8,11 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.cluster import KMeans
 from sklearn.model_selection import train_test_split
-# st.markdown(f"""
-# <style>
-# {open('style.css', 'r').read()}
-# </style>
-# """, unsafe_allow_html=True)
 # Load data
 data = pd.read_csv('machinery_data.csv')
 data.fillna(method='ffill', inplace=True)
 
-# Feature selection and normalization
+# Feature selection and normalization 
 features = ['sensor_1', 'sensor_2', 'sensor_3', 'operational_hours']
 target_rul = 'RUL'
 target_maintenance = 'maintenance'
